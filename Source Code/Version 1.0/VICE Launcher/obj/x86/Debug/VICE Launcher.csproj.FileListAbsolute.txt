@@ -1,7 +1,0 @@
-C:\Users\s201061936\Documents\SharpDevelop Projects\vicelauncher\VICE Launcher\bin\Debug\VICE Launcher.exe
-C:\Users\s201061936\Documents\SharpDevelop Projects\vicelauncher\VICE Launcher\bin\Debug\VICE Launcher.pdb
-C:\Users\s201061936\Documents\SharpDevelop Projects\vicelauncher\VICE Launcher\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\s201061936\Documents\SharpDevelop Projects\vicelauncher\VICE Launcher\obj\x86\Debug\VICE_Launcher.MainForm.resources
-C:\Users\s201061936\Documents\SharpDevelop Projects\vicelauncher\VICE Launcher\obj\x86\Debug\VICE Launcher.csproj.GenerateResource.Cache
-C:\Users\s201061936\Documents\SharpDevelop Projects\vicelauncher\VICE Launcher\obj\x86\Debug\VICE Launcher.exe
-C:\Users\s201061936\Documents\SharpDevelop Projects\vicelauncher\VICE Launcher\obj\x86\Debug\VICE Launcher.pdb
