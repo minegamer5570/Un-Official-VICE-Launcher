@@ -24,7 +24,7 @@ namespace VICE_Launcher
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm());
+			Application.Run(new Main());
 		}
 		
 	}
