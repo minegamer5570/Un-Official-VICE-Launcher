@@ -13,136 +13,73 @@ namespace VICE_Launcher
 		public Main()
 		{
 			InitializeComponent();
-			if (File.Exists("xpet.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MEPE1";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-			if (File.Exists("xvic.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MEVI1";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-			InitializeComponent();
-			if (File.Exists("x64.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MESF1";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-			InitializeComponent();
-			if (File.Exists("x64dtv.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MESF2";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-			InitializeComponent();
-			if (File.Exists("x64sc.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MESF3";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-			if (File.Exists("x128.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MEOT1";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-			if (File.Exists("xplus4.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MEPL1";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-			if (File.Exists("xscpu64.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MESC1";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-			if (File.Exists("xcbm2.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MECB1";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-			if (File.Exists("xcbm5x0.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MECB2";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-			if (File.Exists("vsid.exe")) {
-    			
-			}
-			else {
-				string message = "Warning! Your Vice installation could not be detected! Make sure this executable is in the same folder as Vice. If it is, then your copy of Vice may be damaged. \n\n Error: MESI1";
-                string caption = "Error!";
-				MessageBoxButtons buttons = MessageBoxButtons.OK;
-				DialogResult result;
-				result = MessageBox.Show(message, caption, buttons);
-				Environment.Exit(1);
-			}
-        }
 
-        private void AboutLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            About aboutform = new About();
-            aboutform.Show();
+			if (!File.Exists("xpet.exe")) {
+                LaunchPET.Enabled = false;
+                ModeWarn.Visible = true;
+			}
+
+			if (!File.Exists("xvic.exe")) {
+                LaunchVIC.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+
+			if (!File.Exists("x64.exe")) {
+                LaunchSF.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+
+			if (!File.Exists("x64dtv.exe")) {
+                LaunchSFDTV.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+			
+			if (!File.Exists("x64sc.exe")) {
+                LaunchSFSC.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+			
+			if (!File.Exists("x128.exe")) {
+                LaunchOTE.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+			
+			if (!File.Exists("xplus4.exe")) {
+                LaunchPLUS.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+			
+			if (!File.Exists("xscpu64.exe")) {
+                LaunchSCPU.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+			
+			if (!File.Exists("xcbm2.exe")) {
+                LaunchCBM.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+			
+			if (!File.Exists("xcbm5x0.exe")) {
+                LaunchCBMFXZ.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+			
+			if (!File.Exists("vsid.exe")) {
+                LaunchSID.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+
+            if (!File.Exists("petcat.exe"))
+            {
+                LaunchPETCAT.Enabled = false;
+                ModeWarn.Visible = true;
+            }
+
+            if (!File.Exists("c1541.exe"))
+            {
+                LaunchCDRIVE.Enabled = false;
+                ModeWarn.Visible = true;
+            }
         }
 
         private void LaunchPET_Click(object sender, EventArgs e)
